@@ -7,9 +7,9 @@ import java.util.List;
 import com.score.garrys.model.Usuario;
 import com.score.garrys.config.Conexao;
 
-public class UsuarioRepository {
+class UsuarioRepository {
 
-    public List<Usuario> listar() {
+    List<Usuario> listar() {
         List<Usuario> lista = new ArrayList<>();
 
         try (Connection conn = Conexao.getConnection()) {
@@ -35,3 +35,4 @@ public class UsuarioRepository {
         return lista;
     }
 }
+       
