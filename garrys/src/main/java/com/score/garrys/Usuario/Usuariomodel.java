@@ -2,17 +2,17 @@ package com.score.garrys.model.entidade;
 
 import java.time.LocalDateTime;
 
-class Usuario {
+class Usuariomodel {
 
     private int userId;
     private String username;
     private String password;
     private LocalDateTime createdAt;
 
-    // Construtor vazio
+    
     Usuario() {}
 
-    // Construtor com parâmetros
+    
     Usuario(int userId, String username, String password, LocalDateTime createdAt) {
         this.userId = userId;
         this.username = username;
@@ -20,7 +20,7 @@ class Usuario {
         this.createdAt = createdAt;
     }
 
-    // Getters e Setters
+    
     int getUserId() {
         return userId;
     }
