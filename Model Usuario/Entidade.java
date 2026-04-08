@@ -9,10 +9,10 @@ class Entidade {
     private String password;
     private LocalDateTime createdAt;
 
-    // Construtor vazio (obrigatório em muitas situações)
+    
     Usuario() {}
 
-    // Construtor completo
+    
     Usuario(int userId, String username, String password, LocalDateTime createdAt) {
         this.userId = userId;
         this.username = username;
@@ -20,7 +20,7 @@ class Entidade {
         this.createdAt = createdAt;
     }
 
-    // Getters e Setters
+    
     int getUserId() {
         return userId;
     }
