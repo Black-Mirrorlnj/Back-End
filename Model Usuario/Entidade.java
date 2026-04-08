@@ -2,7 +2,7 @@ package com.score.garrys.model.entidade;
 
 import java.time.LocalDateTime;
 
-class Entidade_Usuario {
+class Entidade {
 
     private int userId;
     private String username;
