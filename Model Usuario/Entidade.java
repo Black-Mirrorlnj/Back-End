@@ -1,26 +1,29 @@
 package com.score.garrys.model.entidade;
 
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-class Entidade {
+@Entity
+@Table(name = "users")
+class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
+
+    @Column(nullable = false)
     private String username;
+
+    @Column(nullable = false)
     private String password;
+
+    @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    
+    // Construtor vazio obrigatório para JPA
     Usuario() {}
 
-    
-    Usuario(int userId, String username, String password, LocalDateTime createdAt) {
-        this.userId = userId;
-        this.username = username;
-        this.password = password;
-        this.createdAt = createdAt;
-    }
-
-    
+    // Getters e Setters
     int getUserId() {
         return userId;
     }
