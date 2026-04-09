@@ -1,7 +1,7 @@
-package com.score.gmod.controller;
+package com.score.garrys.Player.controller;
 
-import com.score.gmod.model.RankingGlobal;
-import com.score.gmod.service.RankingGlobalService;
+import com.score.garrys.Player.model.RankingGlobal;
+import com.score.garrys.Player.service.RankingGlobalService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

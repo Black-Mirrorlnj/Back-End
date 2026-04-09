@@ -1,8 +1,8 @@
-package com.score.gmod.repository;
+package com.score.garrys.Player.repository;
 
 
 
-import com.score.gmod.model.Estatistica;
+import com.score.garrys.Player.model.Estatistica;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,10 +1,10 @@
-package com.score.gmod.controller;
+package com.score.garrys.Player.controller;
 
 
 
-import com.score.gmod.dto.FinalizarPontuacaoRequest;
-import com.score.gmod.model.Pontuacao;
-import com.score.gmod.service.PontuacaoService;
+import com.score.garrys.Player.dto.FinalizarPontuacaoRequest;
+import com.score.garrys.Player.model.Pontuacao;
+import com.score.garrys.Player.service.PontuacaoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

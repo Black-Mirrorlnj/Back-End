@@ -1,8 +1,8 @@
-package com.score.gmod.controller;
+package com.score.garrys.Player.controller;
 
-import com.score.gmod.dto.CriarPartidaRequest;
-import com.score.gmod.model.Partida;
-import com.score.gmod.service.PartidaService;
+import com.score.garrys.Player.dto.CriarPartidaRequest;
+import com.score.garrys.Player.model.Partida;
+import com.score.garrys.Player.service.PartidaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
-package com.score.gmod.repository;
+package com.score.garrys.Player.repository;
 
-import com.score.gmod.model.Jogador;
+import com.score.garrys.Player.model.Jogador;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

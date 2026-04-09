@@ -1,13 +1,13 @@
-package com.score.gmod.service;
+package com.score.garrys.Player.service;
 
 
 
-import com.score.gmod.model.Estatistica;
-import com.score.gmod.model.Pontuacao;
-import com.score.gmod.model.RankingGlobal;
-import com.score.gmod.repository.EstatisticaRepository;
-import com.score.gmod.repository.PontuacaoRepository;
-import com.score.gmod.repository.RankingGlobalRepository;
+import com.score.garrys.Player.model.Estatistica;
+import com.score.garrys.Player.model.Pontuacao;
+import com.score.garrys.Player.model.RankingGlobal;
+import com.score.garrys.Player.repository.EstatisticaRepository;
+import com.score.garrys.Player.repository.PontuacaoRepository;
+import com.score.garrys.Player.repository.RankingGlobalRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

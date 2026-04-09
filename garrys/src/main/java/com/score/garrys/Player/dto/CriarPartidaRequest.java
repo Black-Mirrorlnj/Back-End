@@ -1,4 +1,4 @@
-package com.score.gmod.dto;
+package com.score.garrys.Player.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,9 +1,9 @@
-package com.score.gmod.service;
+package com.score.garrys.Player.service;
 
 
 
-import com.score.gmod.model.Estatistica;
-import com.score.gmod.repository.EstatisticaRepository;
+import com.score.garrys.Player.model.Estatistica;
+import com.score.garrys.Player.repository.EstatisticaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

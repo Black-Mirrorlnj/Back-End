@@ -1,7 +1,7 @@
-package com.score.gmod.service;
+package com.score.garrys.Player.service;
 
-import com.score.gmod.model.RankingGlobal;
-import com.score.gmod.repository.RankingGlobalRepository;
+import com.score.garrys.Player.model.RankingGlobal;
+import com.score.garrys.Player.repository.RankingGlobalRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

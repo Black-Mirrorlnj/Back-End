@@ -1,7 +1,7 @@
-package com.score.gmod.controller;
+package com.score.garrys.Player.controller;
 
-import com.score.gmod.model.Estatistica;
-import com.score.gmod.service.EstatisticaService;
+import com.score.garrys.Player.model.Estatistica;
+import com.score.garrys.Player.service.EstatisticaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

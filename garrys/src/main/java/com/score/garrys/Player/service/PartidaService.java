@@ -1,9 +1,9 @@
-package com.score.gmod.service;
+package com.score.garrys.Player.service;
 
 
 
-import com.score.gmod.model.Partida;
-import com.score.gmod.repository.PartidaRepository;
+import com.score.garrys.Player.model.Partida;
+import com.score.garrys.Player.repository.PartidaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

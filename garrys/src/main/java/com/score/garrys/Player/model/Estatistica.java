@@ -1,4 +1,4 @@
-package com.score.gmod.model;
+package com.score.garrys.Player.model;
 
 import jakarta.persistence.*;
 import lombok.*;

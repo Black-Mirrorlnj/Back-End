@@ -1,9 +1,9 @@
-package com.score.gmod.controller;
+package com.score.garrys.Player.controller;
 
 
-import com.score.gmod.dto.LoginJogadorRequest;
-import com.score.gmod.model.Jogador;
-import com.score.gmod.service.JogadorService;
+import com.score.garrys.Player.dto.LoginJogadorRequest;
+import com.score.garrys.Player.model.Jogador;
+import com.score.garrys.Player.service.JogadorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
