@@ -33,7 +33,7 @@ public class PontuacaoService {
         return pontuacaoRepository.findByPartidaId(partidaId);
     }
 
-    public Pontuacao finalizarPontuacao(Long jogadorId, Long partidaId, Integer scoreFinal, Integer kills, Integer deaths) {
+    public Pontuacao finalizarPontuacao(Long jogadorId, Long finalizar, Long partidaId, Integer scoreFinal, Integer kills, Integer deaths) {
         Pontuacao pontuacao = pontuacaoRepository.findByJogadorIdAndPartidaId(jogadorId, partidaId)
                 .orElseThrow(() -> new RuntimeException("Pontuação não encontrada"));
 
@@ -50,10 +50,7 @@ public class PontuacaoService {
         estatisticaRepository.save(estatistica);
 
         RankingGlobal ranking = rankingGlobalRepository.findById(jogadorId)
-                .orElseGet(() -> RankingGlobal.builder()
-                        .jogadorId(jogadorId)
-                        .pontos(0)
-                        .build());
+                .orElseThrow(() -> new RuntimeException("Ranking não encontrado"));
 
         ranking.setPontos(ranking.getPontos() + scoreFinal);
         rankingGlobalRepository.save(ranking);

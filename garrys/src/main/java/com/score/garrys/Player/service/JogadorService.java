@@ -58,7 +58,9 @@ public class JogadorService {
         return jogadorRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Jogador não encontrado"));
     }
-
+    public Jogador salvar(Jogador jogador) {
+    return jogadorRepository.save(jogador);
+}
     public Jogador loginPorSteamId(String steamId, String nome) {
         return jogadorRepository.findBySteamId(steamId)
                 .map(jogador -> {
@@ -74,4 +76,8 @@ public class JogadorService {
                                 .build()
                 ));
     }
-}
+    
+
+
+}    
+

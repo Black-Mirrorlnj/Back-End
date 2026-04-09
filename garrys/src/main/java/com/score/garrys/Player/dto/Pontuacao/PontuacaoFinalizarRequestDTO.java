@@ -1,12 +1,11 @@
-package com.score.garrys.Player.dto;
+package com.score.garrys.Player.dto.Pontuacao;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class FinalizarPontuacaoRequest {
-    private Long finalizar;
+public class PontuacaoFinalizarRequestDTO {
     private Long jogadorId;
     private Long partidaId;
     private Integer scoreFinal;

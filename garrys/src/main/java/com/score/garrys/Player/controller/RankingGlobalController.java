@@ -1,6 +1,7 @@
 package com.score.garrys.Player.controller;
 
-import com.score.garrys.Player.model.RankingGlobal;
+import com.score.garrys.Player.dto.Ranking.RankingGlobalResponseDTO;
+import com.score.garrys.Player.mapper.RankingGlobalMapper;
 import com.score.garrys.Player.service.RankingGlobalService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,10 @@ public class RankingGlobalController {
     private final RankingGlobalService rankingGlobalService;
 
     @GetMapping
-    public List<RankingGlobal> listar() {
-        return rankingGlobalService.listar();
+    public List<RankingGlobalResponseDTO> listar() {
+        return rankingGlobalService.listar()
+                .stream()
+                .map(RankingGlobalMapper::toResponseDTO)
+                .toList();
     }
 }
