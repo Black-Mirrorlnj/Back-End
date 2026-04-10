@@ -44,7 +44,7 @@ public class PontuacaoController {
 
     @PutMapping("/finalizar")
     public PontuacaoResponseDTO finalizar(@RequestBody PontuacaoFinalizarRequestDTO dto) {
-        Pontuacao pontuacao = pontuacaoService.finalizar(
+        Pontuacao pontuacao = pontuacaoService.finalizarPontuacao(
                 dto.getJogadorId(),
                 dto.getPartidaId(),
                 dto.getScoreFinal(),
