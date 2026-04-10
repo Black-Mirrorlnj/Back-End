@@ -1,4 +1,4 @@
-package com.score.gmod.model;
+package com.score.garrys.Visit.Model;
 
 import java.time.LocalDateTime;
 

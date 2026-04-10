@@ -1,6 +1,6 @@
 package com.score.garrys.Visit.Controller;
 
-import com.score.garrys.Visit.Dto.VisitanteDTO;
+import com.score.garrys.Visit.DTO.DTO;
 import com.score.garrys.Visit.Model.Visitante;
 import com.score.garrys.Visit.Service.VisitanteService;
 import lombok.RequiredArgsConstructor;
@@ -12,18 +12,18 @@ import java.util.Map;
 @RestController
 @RequestMapping("/visitantes")
 @RequiredArgsConstructor
-public class VisitanteController {
+public class Controller {
 
     private final VisitanteService service;
 
     @PostMapping("/entrada")
-    public Map<String, String> entrada(@RequestBody VisitanteDTO dto) {
+    public Map<String, String> entrada(@RequestBody DTO dto) {
         service.registrarEntrada(dto.getNome());
         return Map.of("status", "Entrada registrada com sucesso");
     }
 
     @PutMapping("/saida")
-    public Map<String, String> saida(@RequestBody VisitanteDTO dto) {
+    public Map<String, String> saida(@RequestBody DTO dto) {
         service.registrarSaida(dto.getIdVisitante(), dto.getKills());
         return Map.of("status", "Saída registrada com sucesso");
     }
