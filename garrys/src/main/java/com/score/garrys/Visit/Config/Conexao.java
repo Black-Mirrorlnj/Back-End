@@ -1,4 +1,4 @@
-package com.score.gmod.config;
+package com.score.garrys.Visit.Config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

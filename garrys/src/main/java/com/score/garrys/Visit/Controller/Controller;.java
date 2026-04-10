@@ -1,8 +1,8 @@
-package com.score.gmod.controller;
+package com.score.garrys.Visit.Controller;
 
-import com.score.gmod.dto.VisitanteDTO;
-import com.score.gmod.model.Visitante;
-import com.score.gmod.service.VisitanteService;
+import com.score.garrys.Visit.Dto.VisitanteDTO;
+import com.score.garrys.Visit.Model.Visitante;
+import com.score.garrys.Visit.Service.VisitanteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

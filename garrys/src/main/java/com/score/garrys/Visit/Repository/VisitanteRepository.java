@@ -1,7 +1,7 @@
-package com.score.gmod.repository;
+package com.score.garrys.Visit.Repository;
 
-import com.score.gmod.model.Visitante;
-import com.score.gmod.config.Conexao;
+import com.score.garrys.Visit.Model.Visitante;
+import com.score.garrys.Visit.Config.Conexao;
 
 import java.sql.*;
 import java.util.*;

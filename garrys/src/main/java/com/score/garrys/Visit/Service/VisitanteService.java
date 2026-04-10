@@ -1,7 +1,7 @@
-package com.score.gmod.service;
+package com.score.garrys.Visit.Service;
 
-import com.score.gmod.model.Visitante;
-import com.score.gmod.repository.VisitanteRepository;
+import com.score.garrys.Visit.Model.Visitante;
+import com.score.garrys.Visit.Repository.VisitanteRepository;
 
 import java.util.List;
 

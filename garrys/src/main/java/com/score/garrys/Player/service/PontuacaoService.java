@@ -33,7 +33,7 @@ public class PontuacaoService {
         return pontuacaoRepository.findByPartidaId(partidaId);
     }
 
-    public Pontuacao finalizarPontuacao(Long jogadorId, Long finalizar, Long partidaId, Integer scoreFinal, Integer kills, Integer deaths) {
+    public Pontuacao finalizarPontuacao(Long jogadorId , Long partidaId, Integer scoreFinal, Integer kills, Integer deaths) {
         Pontuacao pontuacao = pontuacaoRepository.findByJogadorIdAndPartidaId(jogadorId, partidaId)
                 .orElseThrow(() -> new RuntimeException("Pontuação não encontrada"));
 

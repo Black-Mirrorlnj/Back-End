@@ -6,7 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FinalizarPontuacaoRequest {
-    private Long finalizar;
     private Long jogadorId;
     private Long partidaId;
     private Integer scoreFinal;
