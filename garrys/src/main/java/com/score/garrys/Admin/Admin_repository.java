@@ -1,13 +1,13 @@
-package com.score.garrys.repository;
+package com.score.garrys.Admin.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.score.garrys.model.entidade.Administrador;
-import com.score.garrys.config.Conexao;
+import com.score.garrys.Admin.model.entidade.Administrador;
+import com.score.garrys.Conexao;
 
-public class AdministradorRepository {
+public class Admin_repository {
 
     public List<Administrador> listar() {
         List<Administrador> lista = new ArrayList<>();

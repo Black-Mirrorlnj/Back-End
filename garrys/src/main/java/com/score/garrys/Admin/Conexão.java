@@ -1,9 +1,9 @@
-package com.score.garrys.config;
+package com.score.garrys.Admin.Conexão;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class Conexao {
+public class Conexão {
 
     private static final String URL = "jdbc:mysql://localhost:3306/seubanco";
     private static final String USER = "root";

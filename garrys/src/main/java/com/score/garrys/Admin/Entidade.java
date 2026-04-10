@@ -1,8 +1,8 @@
-package com.score.garrys.model.entidade;
+package com.score.garrys.Admin.Entidade;
 
 import java.time.LocalDateTime;
 
-public class Administrador {
+public class Entidade {
 
     private int idAdmin;
     private String username;
