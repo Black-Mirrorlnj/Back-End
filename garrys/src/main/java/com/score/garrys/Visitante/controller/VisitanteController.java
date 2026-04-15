@@ -1,26 +1,15 @@
-package com.score.garrys.Visit.Controller;
+package com.score.garrys.Visitante.controller;
 
-import com.score.garrys.Visit.DTO.DTO;
-import com.score.garrys.Visit.Model.Visitante;
-import com.score.garrys.Visit.Service.VisitanteService;
+import com.score.garrys.Visitante.dto.VisitanteDTO;
+import com.score.garrys.Visitante.model.Visitante;
+import com.score.garrys.Visitante.service.VisitanteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-
-@RestController
-@RequestMapping("/visitantes")
-@RequiredArgsConstructorpackage com.score.gmod.controller;
-
-import com.score.gmod.dto.VisitanteDTO;
-import com.score.gmod.service.VisitanteService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-
 import jakarta.validation.Valid;
-import java.util.List;
-import java.util.Map;
+
 
 @RestController
 @RequestMapping("/visitantes")
@@ -57,7 +46,7 @@ public class VisitanteController {
         return Map.of("status", "Removido com sucesso");
     }
 }
-public class Controller {
+public class VisitanteController {
 
     private final VisitanteService service;
 

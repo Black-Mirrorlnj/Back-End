@@ -1,7 +1,7 @@
-package com.score.gmod.mapper;
+package com.score.garrys.Visitante.mapper;
 
-import com.score.gmod.dto.VisitanteDTO;
-import com.score.gmod.model.Visitante;
+import com.score.garrys.Visitante.dto.VisitanteDTO;
+import com.score.garrys.Visitante.model.Visitante;
 
 import java.util.Collections;
 import java.util.List;

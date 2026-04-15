@@ -1,9 +1,9 @@
-package com.score.garrys.Visit.Service;
-
-import com.score.garrys.Visit.Model.Visitante;
-import com.score.garrys.Visit.Repository.VisitanteRepository;
+package com.score.garrys.Visitante.service;
 
 import java.util.List;
+
+import com.score.garrys.Visitante.model.Visitante;
+import com.score.garrys.Visitante.repository.VisitanteRepository;
 
 public class VisitanteService {
 

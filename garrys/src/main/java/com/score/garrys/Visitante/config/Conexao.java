@@ -1,4 +1,4 @@
-package com.score.garrys.Visit.Config;
+package com.score.garrys.Visitante.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

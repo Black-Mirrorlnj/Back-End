@@ -1,78 +1,79 @@
-package com.score.garrys.service;
+package com.score.garrys.Usuario.service;
 
-import com.score.garrys.model.Usuario;
-import com.score.garrys.repository.UsuarioRepository;
-import com.score.garrys.dto.UsuarioRequest;
-import com.score.garrys.dto.UsuarioResponse;
-import com.score.garrys.mapper.UsuarioMapper;
-
+import com.score.garrys.Usuario.dto.UsuarioLoginRequestDTO;
+import com.score.garrys.Usuario.dto.UsuarioRequestDTO;
+import com.score.garrys.Usuario.mapper.UsuarioMapper;
+import com.score.garrys.Usuario.model.Usuario;
+import com.score.garrys.Usuario.repository.UsuarioRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
-class UsuarioService {
+@RequiredArgsConstructor
+public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
 
-    UsuarioService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
-
-    
-    List<UsuarioResponse> listarUsuarios() {
-        return usuarioRepository.findAll()
-                .stream()
-                .map(UsuarioMapper::toResponse)
-                .collect(Collectors.toList());
-    }
-
-    
-    UsuarioResponse buscarPorId(int id) {
-        Usuario usuario = usuarioRepository.findById(id).orElse(null);
-
-        if (usuario != null) {
-            return UsuarioMapper.toResponse(usuario);
+    public Usuario salvar(Usuario usuario) {
+        if (usuarioRepository.existsByLogin(usuario.getLogin())) {
+            throw new RuntimeException("Login já cadastrado");
         }
 
-        return null;
+        if (usuarioRepository.existsByEmail(usuario.getEmail())) {
+            throw new RuntimeException("E-mail já cadastrado");
+        }
+
+        return usuarioRepository.save(usuario);
     }
 
-    
-    UsuarioResponse criarUsuario(UsuarioRequest dto) {
-
-        if (usuarioRepository.existsByUsername(dto.getUsername())) {
-            throw new RuntimeException("Username já existe");
-        }
-
-        if (usuarioRepository.existsByEmail(dto.getEmail())) {
-            throw new RuntimeException("Email já existe");
-        }
-
+    public Usuario criar(UsuarioRequestDTO dto) {
         Usuario usuario = UsuarioMapper.toEntity(dto);
-        Usuario salvo = usuarioRepository.save(usuario);
-
-        return UsuarioMapper.toResponse(salvo);
+        return salvar(usuario);
     }
 
-    
-    UsuarioResponse atualizarUsuario(int id, UsuarioRequest dto) {
+    public List<Usuario> listar() {
+        return usuarioRepository.findAll();
+    }
 
-        Usuario existente = usuarioRepository.findById(id).orElse(null);
+    public Usuario buscarPorId(Long id) {
+        return usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+    }
 
-        if (existente == null) {
-            return null;
+    public Usuario atualizar(Long id, UsuarioRequestDTO dto) {
+        Usuario usuario = buscarPorId(id);
+
+        if (!usuario.getLogin().equals(dto.getLogin()) && usuarioRepository.existsByLogin(dto.getLogin())) {
+            throw new RuntimeException("Login já cadastrado");
         }
 
-        Usuario atualizado = UsuarioMapper.toEntityUpdate(dto, existente);
-        Usuario salvo = usuarioRepository.save(atualizado);
+        if (!usuario.getEmail().equals(dto.getEmail()) && usuarioRepository.existsByEmail(dto.getEmail())) {
+            throw new RuntimeException("E-mail já cadastrado");
+        }
 
-        return UsuarioMapper.toResponse(salvo);
+        UsuarioMapper.updateEntity(usuario, dto);
+        return usuarioRepository.save(usuario);
     }
 
-    
-    void deletarUsuario(int id) {
-        usuarioRepository.deleteById(id);
+    public void deletar(Long id) {
+        Usuario usuario = buscarPorId(id);
+        usuarioRepository.delete(usuario);
+    }
+
+    public Usuario login(UsuarioLoginRequestDTO dto) {
+        Usuario usuario = usuarioRepository.findByLogin(dto.getLogin())
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        if (!usuario.getSenha().equals(dto.getSenha())) {
+            throw new RuntimeException("Senha inválida");
+        }
+
+        if (Boolean.FALSE.equals(usuario.getAtivo())) {
+            throw new RuntimeException("Usuário inativo");
+        }
+
+        return usuario;
     }
 }

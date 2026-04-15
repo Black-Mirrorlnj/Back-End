@@ -1,10 +1,10 @@
-package com.score.garrys.Visit.Repository;
-
-import com.score.garrys.Visit.Model.Visitante;
-import com.score.garrys.Visit.Config.Conexao;
+package com.score.garrys.Visitante.repository;
 
 import java.sql.*;
 import java.util.*;
+
+import com.score.garrys.Visitante.model.Visitante;
+import com.score.garrys.Visitante.config.Conexao;
 
 public class VisitanteRepository {
 

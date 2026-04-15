@@ -1,9 +1,9 @@
-package com.score.garrys.Visit.DTO;
+package com.score.garrys.Visitante.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
-public class DTO {
+public class VisitanteDTO {
 
     private int idVisitante;
 

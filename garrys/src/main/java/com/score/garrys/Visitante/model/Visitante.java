@@ -1,4 +1,4 @@
-package com.score.garrys.Visit.Model;
+package com.score.garrys.Visitante.model;
 
 import java.time.LocalDateTime;
 
